@@ -1,0 +1,157 @@
+{
+  "info": {
+    "name": "Card Management System",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"username\": \"admin\",\n    \"password\": \"admin\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/auth/login",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "auth", "login"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Cards",
+      "item": [
+        {
+          "name": "Get All Cards",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/cards",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "cards"]
+            }
+          }
+        },
+        {
+          "name": "Get Card by ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/cards/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "cards", "1"]
+            }
+          }
+        },
+        {
+          "name": "Create Card",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Test Card\",\n    \"description\": \"Test Description\",\n    \"category_id\": 1,\n    \"download_url\": \"https://example.com/download\",\n    \"preview_url\": \"https://example.com/preview\",\n    \"markdown_content\": \"# Test Content\\n\\nThis is a test card.\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/cards",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "cards"]
+            }
+          }
+        },
+        {
+          "name": "Update Card",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Updated Card\",\n    \"description\": \"Updated Description\",\n    \"category_id\": 1,\n    \"download_url\": \"https://example.com/updated-download\",\n    \"preview_url\": \"https://example.com/updated-preview\",\n    \"markdown_content\": \"# Updated Content\\n\\nThis card has been updated.\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/cards/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "cards", "1"]
+            }
+          }
+        },
+        {
+          "name": "Delete Card",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{authToken}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/cards/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "cards", "1"]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000"
+    },
+    {
+      "key": "authToken",
+      "value": ""
+    }
+  ]
+}
