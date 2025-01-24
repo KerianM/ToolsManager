@@ -17,3 +17,5 @@
 ## docker构建教程
 ### 1.如果想修改端口就修改nginx.conf文件中的listen和server_name
 ### 2.通过```docker build -t my-app .```构建容器镜像
+
+## 如果你不想自己构建镜像，可以前往Tag下载本地镜像自行导入。
