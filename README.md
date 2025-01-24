@@ -1,4 +1,5 @@
-### 更新方式：将project-bolt-sb1-4uw9ps6t.zip压缩包中的project文件夹内容覆盖frontend文件夹内容，将project-bolt-sb1-xqgmnvys.zip压缩包中的project文件夹内容覆盖backend文件夹内容，然后继续进行操作即可。
+## 更新方式
+### 将project-bolt-sb1-4uw9ps6t.zip压缩包中的project文件夹内容覆盖frontend文件夹内容，将project-bolt-sb1-xqgmnvys.zip压缩包中的project文件夹内容覆盖backend文件夹内容，然后继续进行操作即可。
 
 ## 2025-01-22更新
 ### 1.修复表头显示问题
