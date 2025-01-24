@@ -1,9 +1,11 @@
 # ToolsManager
 基于nodejs工具管理系统，前后端分布式管理，并通过docker分阶段部署运行，附带DockerFile和nginx.conf配置
 ## Node版本：18
-## 前后端构建
+## nodejs添加依赖包
+### npm install
+## 前端构建
 ### npm run build
-## 前后端运行
+## 前后端运行(需要修改前端url)
 ### npm run dev
 
 ## docker构建教程
